@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+/* Main Container */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Video */
+
+.video {
+  width: 100vw;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* Controls */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.controlsContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100vw;
+  background-color: transparent;
+  margin-top: -50vw;
+  padding: 0 40px;
+  z-index: 20;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 18rem;
+  margin: auto;
+}
+
+.controlsIcon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.controlsIcon--small {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+/* The time controls section */
+
+.timecontrols {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 4rem;
+  margin-left: 10vw;
+}
+
+.time_progressbarContainer {
+  background-color: gray;
+  border-radius: 15px;
+  width: 75vw;
+  height: 5px;
+  z-index: 30;
+  position: relative;
+  margin: 0 20px;
+}
+
+.time_progressBar {
+  border-radius: 15px;
+  background-color: indigo;
+  height: 100%;
+}
+
+.controlsTime {
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
